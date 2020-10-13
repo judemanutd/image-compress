@@ -1,0 +1,16 @@
+{
+  "name": "image-compress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "npx nodemon"
+  },
+  "dependencies": {
+    "p-limit": "^3.0.2",
+    "tinify": "^1.6.0-beta.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
