@@ -3,6 +3,8 @@ const path = require("path");
 const tinify = require("tinify");
 const pLimit = require("p-limit");
 const fs = require("fs");
+const chalk = require("chalk");
+
 tinify.key = "";
 
 const hostname = "127.0.0.1";
@@ -31,9 +33,9 @@ const destDirectory = path.join(__dirname, "/compressed");
 
     await Promise.allSettled(promises);
 
-    console.log("All DONE");
+    console.log(chalk.blue("All DONE"), e);
   } catch (e) {
-    console.error("We've thrown! Whoops!", e);
+    console.error(chalk.red("We've thrown! Whoops!"), e);
   }
 })();
 
